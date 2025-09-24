@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int gold;
+            int crustal;
+            int pricePerCrystal = 10;            
+            Console.WriteLine("Приветсвуем вас в нашем магазине кристаллов! Сегодня кристаллы по " + pricePerCrystal + " золота" );
+            Console.Write("Сколько у вас с собой золота? ");
+            gold = Convert.ToInt32 (Console.ReadLine());
+            Console.Write("Сколько кристаллов вы хотите приобрести? ");
+            crustal = Convert.ToInt32(Console.ReadLine());
+            gold -= crustal * pricePerCrystal;
+            Console.WriteLine("Теперь у вас " + crustal + " кристалов " + " и " + gold +" золота.");
+
