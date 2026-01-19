@@ -1,12 +1,40 @@
-int numberOfPeople;
-int receptionTimeForOnePersonInMinutes = 10;
-int totalWaitingTimeInMinutes;
-int numberOfMinutesInAnHour = 60;
-int waitingTimeInMinutes;
-int waitingtimeInHours;
-Console.Write("Приветсвуем в вас приложении для определения времени в вашей очереди! Подскажите сколько перед вами человек? ");
-numberOfPeople = Convert.ToInt32(Console.ReadLine());
-totalWaitingTimeInMinutes = numberOfPeople * receptionTimeForOnePersonInMinutes;
-waitingtimeInHours = totalWaitingTimeInMinutes / numberOfMinutesInAnHour;
-waitingTimeInMinutes = totalWaitingTimeInMinutes % numberOfMinutesInAnHour;
-Console.WriteLine($"Ваше ожидание составит {waitingtimeInHours} часа и {waitingTimeInMinutes} минут");
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int numberOfPeople;
+
+            int receptionTimeForOnePersonInMinutes = 10;
+
+            int totalWaitingTimeInMinutes;
+
+            int numberOfMinutesInAnHour = 60;
+
+            int waitingTimeInMinutes;
+
+            int waitingtimeInHours;
+            
+            Console.Write("Приветсвуем в вас приложении для определения времени в вашей очереди! Подскажите сколько перед вами человек? ");
+            numberOfPeople = Convert.ToInt32(Console.ReadLine());
+            
+            totalWaitingTimeInMinutes = numberOfPeople * receptionTimeForOnePersonInMinutes;
+
+            waitingtimeInHours = totalWaitingTimeInMinutes / numberOfMinutesInAnHour;
+
+            waitingTimeInMinutes = totalWaitingTimeInMinutes % numberOfMinutesInAnHour;
+
+            Console.WriteLine($"Ваше ожидание составит {waitingtimeInHours} часа и {waitingTimeInMinutes} минут");
+
+
+
+        }
+    }
+}
